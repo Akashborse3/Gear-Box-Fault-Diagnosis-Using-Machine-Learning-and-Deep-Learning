@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+div.banner, #description, #second-section, #third-section, #fourth-section, #fifth-section {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+div.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(header.jpeg);
+}
+
+#description {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(gb.jpg); /* Add the path to your new image */
+}
+
+#second-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(gb1.jfif); /* Add the path to your second image */
+}
+
+#third-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(gb3.jpg); /* Add the path to your third image */
+}
+
+
+
+#fifth-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(gb2.jfif); /* Add the path to your fifth image */
+}
+
+div.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+div.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+div.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+div.navbar ul li:hover::after {
+    width: 100%;
+}
+
+div.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+div.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+div.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+/* Styles for the Description and subsequent sections */
+#description, #second-section, #third-section, #fourth-section, #fifth-section {
+    padding: 50px 20px;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#description h2, #second-section h2, #third-section h2, #fourth-section h2, #fifth-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#description p, #second-section p, #third-section p, #fourth-section p, #fifth-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Set initial state of the text */
+#description p, #second-section p, #third-section p, #fourth-section p, #fifth-section p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+/* Add a class to trigger the animation */
+#description.active p, #second-section.active p, #third-section.active p, #fourth-section.active p, #fifth-section.active p {
+    opacity: 1;
+    transform: translateY(0);
+}
+div.image-text-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+div.circle-image {
+    text-align: center;
+    margin-right: 20px;
+    max-width: 250px; /* Adjust the margin-right as needed to create space between images */
+}
+
+div.circle-image:last-child {
+    margin-right: 0; /* Remove margin-right for the last image */
+}
+
+div.circle-image img {
+    border-radius: 50%;
+    width: 250px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    margin-bottom: 10px;
+}
+
+div.circle-image p {
+    font-size: 12px; /* Adjust the font size as needed */
+    margin-top: 5px; /* Add margin-top to create space between image and text */
+    /* Add any additional styling for the text */
+}
+#fourth-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(gearbox.jpeg);
+    padding: 50px 20px;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#fourth-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#fourth-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left; /* Adjust text alignment as needed */
+}
+
+/* Adjustments for List Items */
+#fourth-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#fourth-section li {
+    margin-bottom: 10px;
+}
+
+/* Set initial state of the text */
+#fourth-section p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+/* Add a class to trigger the animation */
+#fourth-section.active p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+

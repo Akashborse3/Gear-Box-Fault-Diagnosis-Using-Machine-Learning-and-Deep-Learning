@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gearbox Fault Diagnosis Using Machine Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="#description">Description</a></li>
+                <li><a href="#second-section">Problem Caused</a></li>
+                <li><a href="#third-section">Problem Solved</a></li>
+                <li><a href="#fourth-section">Future Scope</a></li>
+                <li><a href="#fifth-section">Result</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Gearbox Fault Diagnosis Using Machine Learning</h1>
+            <p>Gearbox fault diagnosis using machine learning involves training models on sensor data to detect anomalies and predict faults, 
+                <br> predictive maintenance in industrial applications.</p>
+                <div>
+                    <button id="open-form-button" onclick="openNewPage()" type="button"><span></span> Want to know if there is a problem in your gearbox</button>
+                </div>
+        </div>
+    </div>
+
+    <div id="description">
+        <h2>Description</h2>
+        <p>Gearbox fault diagnosis using machine learning is a process that begins with the collection of data from sensors attached to the gearbox, encompassing parameters such as vibration signals, temperature readings, and oil analysis. This raw data undergoes preprocessing to eliminate noise and irrelevant information, followed by normalization or standardization for consistency. Feature extraction helps identify relevant characteristics in the data that differentiate between normal and faulty conditions, reducing dimensionality. The data is labeled according to operating conditions, facilitating supervised learning. Machine learning algorithms, such as decision trees or neural networks, are selected based on the problem nature, and the model is trained on the labeled dataset. Validation and testing ensure the model's accuracy, and the output is interpreted to understand feature contributions. The trained model is integrated into the gearbox monitoring system for real-time analysis and continuous monitoring, contributing to predictive maintenance and operational efficiency. Regular updates and retraining are essential to keep the model effective in detecting emerging faults as new data becomes available or operating conditions change.</p>
+    </div>
+
+    <div id="second-section">
+        <h2>Problem Caused</h2>
+        <div class="image-text-container">
+            <div class="circle-image">
+                <img src="friction.png" alt="Image 1">
+                <p>Reduced Efficiency: Gearbox faults increase friction, wear, or misalignment, reducing system efficiency, causing performance decline, and raising energy consumption.</p>
+            </div>
+            <div class="circle-image">
+                <img src="damage.png" alt="Image 2">
+                <p>Safety Risks: Serious gearbox faults pose safety risks to equipment and personnel, with potential for accidents, damage to machinery, and threats to workplace safety.</p>
+            </div>
+            <div class="circle-image">
+                <img src="bearings.png" alt="Image 3">
+                <p>Component Damage: 
+                    Untreated gearbox faults can escalate, causing damage to gears, shafts, and bearings, leading to costly repairs or system failure.</p>
+            </div>
+            <!-- Add more images and text as needed -->
+        </div>
+    </div>
+    
+    <!-- Updated third-section -->
+    <div id="third-section">
+        <h2>Problem Solved</h2>
+        <div class="image-text-container">
+            <div class="circle-image">
+                <img src="rupee.jpg" alt="Image 4">
+                <p>Cost Savings: Predictive maintenance, guided by model insights, cuts overall maintenance costs by addressing issues before they escalate into pricier and more extensive repairs.</p>
+            </div>
+            <div class="circle-image">
+                <img src="bearings1.png" alt="Image 5">
+                <p>Extending Component Life: Timely fault identification enables targeted repairs, extending gearbox component lifespan and minimizing the need for premature replacements.</p>
+            </div>
+            <div class="circle-image">
+                <img src="data.jfif" alt="Image 6">
+                <p>Data-Driven Insights: The model offers insights into <br>specific fault-detection features, assisting engineers and maintenance personnel in comprehending and addressing underlying issues.</p>
+            </div>
+            <!-- Add more images and text as needed -->
+        </div>
+    </div>
+
+    <!-- Newly added Future Scope section -->
+    <div id="fourth-section">
+        <h2>Future Scope</h2>
+        <p>
+
+            <br>1. Enhanced Accuracy: Continued improvement in algorithms for more accurate and reliable fault detection.
+            
+            <br>2. Integration with IoT: Real-time monitoring through IoT for predictive maintenance, reducing downtime.
+            
+            <br>3. Deep Learning Advances: Utilizing advanced deep learning techniques for analyzing complex data patterns.
+            
+            <br>4. Edge Computing: Implementing machine learning models on edge devices for real-time analysis.
+            
+            <br>5. Adaptive and Transfer Learning: Models that adapt to changing conditions and can transfer knowledge across different scenarios.
+            
+            <br>6. Integration with Maintenance Systems: Seamless integration with maintenance management systems for optimized maintenance processes.
+            
+            <br>7. Standardization and Regulations: Increased focus on standardization and regulations to ensure reliability and safety.
+            
+            <br>8. Interdisciplinary Collaboration: Collaborative efforts between experts, data scientists, and engineers for specialized models tailored to industry needs.</p>
+    </div>
+
+    <!-- Newly added Result section -->
+    <div id="fifth-section">
+        <h2>Result</h2>
+        <p>The project on gearbox fault diagnosis using machine learning achieved remarkable success, boasting an impressive accuracy rate exceeding 98 percent. This accomplishment was <br>realized through the implementation of a robust machine learning model, specifically employing the Random Forest algorithm. The utilization of Random Forest contributed significantly<br> to the high accuracy, showcasing the effectiveness of this approach in accurately detecting and diagnosing faults in gearboxes. This outstanding performance underscores the potential of <br>machine learning applications, particularly in enhancing the precision and reliability of fault diagnosis in critical industrial systems.</p>
+    </div>
+
+    <!-- Newly added Form section -->
+    
+
+    <script>
+        function openNewPage() {
+            window.open('http://127.0.0.1:5000/', '_blank');
+        }
+        $(document).ready(function () {
+            // Function to check if the user has scrolled to the bottom of each section
+            function isScrolledToSectionBottom(sectionId) {
+                var sectionHeight = $(sectionId).height();
+                var sectionTop = $(sectionId).offset().top;
+                var windowHeight = $(window).height();
+                var scrollTop = $(window).scrollTop();
+
+                return scrollTop + windowHeight >= sectionTop + sectionHeight;
+            }
+
+            // Function to handle scroll events
+            function handleScroll() {
+                if (isScrolledToSectionBottom('#description')) {
+                    $('#description').addClass('active');
+                }
+
+                if (isScrolledToSectionBottom('#second-section')) {
+                    $('#second-section').addClass('active');
+                }
+
+                if (isScrolledToSectionBottom('#third-section')) {
+                    $('#third-section').addClass('active');
+                }
+
+                if (isScrolledToSectionBottom('#fourth-section')) {
+                    $('#fourth-section').addClass('active');
+                }
+
+                if (isScrolledToSectionBottom('#fifth-section')) {
+                    $('#fifth-section').addClass('active');
+                }
+            }
+
+            // Add a click event handler for the button to show the form
+            $('#open-form-button').click(function() {
+                $('#form-section').show();
+            });
+
+            // Add a submit event handler for the form (you can replace this with your actual form submission logic)
+            $('#gearbox-form').submit(function(e) {
+                e.preventDefault();
+
+                // Get the values of the input fields
+                var vibrationInput1 = $('#vibration-input1').val();
+                var vibrationInput2 = $('#vibration-input2').val();
+                var vibrationInput3 = $('#vibration-input3').val();
+                var vibrationInput4 = $('#vibration-input4').val();
+
+                // You can now use these values for further processing or send them to a server for analysis
+                console.log("Vibration Input 1:", vibrationInput1);
+                console.log("Vibration Input 2:", vibrationInput2);
+                console.log("Vibration Input 3:", vibrationInput3);
+                console.log("Vibration Input 4:", vibrationInput4);
+
+                // Optionally, you can hide the form after submission
+                $('#form-section').hide();
+            });
+
+            // Attach the scroll event handler
+            $(window).on('scroll', handleScroll);
+
+            // Initial check on page load
+            handleScroll();
+        });
+    </script>
+</body>
+</html>
